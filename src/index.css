@@ -1,0 +1,61 @@
+:root {
+  --font-family: "Poppins", -apple-system, BlinkMacSystemFont, sans-serif;
+  --base: black;
+  --primary: #011dac;
+  --navy: #011f67;
+  --secondary: #e2e7ff;
+  --background: white;
+
+  --space: 4px;
+  --space-2x: 8px;
+  --space-3x: 12px;
+  --space-4x: 16px;
+  --space-5x: 20px;
+  --space-6x: 24px;
+  --space-7x: 28px;
+  --space-8x: 32px;
+  --space-9x: 36px;
+  --space-10x: 40px;
+  --radius: 6px;
+}
+
+button,
+p {
+  all: unset;
+}
+
+p,
+li {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.004em;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

@@ -1,0 +1,60 @@
+.accordion-base {
+  border-radius: var(--radius);
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.accordion-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.accordion-item__header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2x);
+  width: 100%;
+  font-size: 1.25rem;
+  transition: color 0.2s ease-out;
+}
+
+.accordion-item__header:focus,
+.accordion-item__header:hover {
+  color: var(--navy);
+}
+
+.accordion-item__header[aria-expanded="true"] {
+  color: var(--navy);
+}
+
+.accordion-item__header-affordance {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0 var(--space-2x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 200;
+}
+
+.accordion-item__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition:
+    grid-template-rows 0.2s ease-out,
+    padding 0.2s ease-out;
+  padding: 0 var(--space-2x) 0 var(--space-2x);
+}
+
+.accordion-item__header[aria-expanded="true"] + .accordion-item__content {
+  grid-template-rows: 1fr;
+  padding-bottom: var(--space-3x);
+}
+
+.accordion-item__content-inner {
+  overflow: hidden;
+}
