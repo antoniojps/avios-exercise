@@ -21,7 +21,6 @@ Demo can be found here: https://avios-exercise.vercel.app/
 
 Potential enhancements:
 
-- [ ] Supporting horizontal/vertical orientation.
 - [ ] Supporting Right to Left direction.
 - [ ] Possibility to expand one or multiple items.
 - [ ] Adding disabled state.
