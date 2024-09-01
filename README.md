@@ -1,6 +1,6 @@
 # Avios Exercises
 
-This document contains the solution for the exercises proposed in the Avios Tech Test.
+This document contains the solution for the Avios Design System Software Engineer task.
 
 You can find the solutions below:
 
