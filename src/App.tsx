@@ -1,9 +1,9 @@
-import { AccordionItem, AccordionSingleBase } from "./components/accordion";
+import { Accordion } from "./components/accordion";
 
 function App() {
   return (
-    <AccordionSingleBase>
-      <AccordionItem value="a" header="What are Avios?">
+    <Accordion>
+      <Accordion.Item value="a" header="What are Avios?">
         <p>
           Avios is the loyalty currency of the British Airways Executive Club
           and our partners.
@@ -16,8 +16,8 @@ function App() {
           With over 2,000 partners across fashion, travel and finance, the
           possibilities are endless.
         </p>
-      </AccordionItem>
-      <AccordionItem value="b" header="What is IAG?">
+      </Accordion.Item>
+      <Accordion.Item value="b" header="What is IAG?">
         <p>
           Formed in January 2011, IAG is the parent company of British Airways,
           Iberia, Vueling, Aer Lingus, LEVEL, IAG Loyalty and IAG Cargo. It is a
@@ -25,8 +25,8 @@ function App() {
           Spanish stock exchanges. The corporate head office for IAG is in
           London, UK.
         </p>
-      </AccordionItem>
-      <AccordionItem value="c" header="How can I collect Avios?">
+      </Accordion.Item>
+      <Accordion.Item value="c" header="How can I collect Avios?">
         <ul>
           <li>
             Booking British Airways flights, holidays, hotel stays and car hire
@@ -37,8 +37,8 @@ function App() {
             on a British Airways or Iberia-marketed flight.
           </li>
         </ul>
-      </AccordionItem>
-    </AccordionSingleBase>
+      </Accordion.Item>
+    </Accordion>
   );
 }
 

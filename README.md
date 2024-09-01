@@ -1,50 +1,121 @@
-# React + TypeScript + Vite
+# 1. Accordion Component
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This solution asumes an accordion is a series of vertically stacked interactive headings that each expand to reveal a corresponding section of content.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [x] Full keyboard navigation.
+- [x] Can be controlled or uncontrolled.
+- [x] Minor customization (header and classNames)
 
-## Expanding the ESLint configuration
+Potential enhancements:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [ ] Supporting horizontal/vertical orientation.
+- [ ] Supporting Right to Left direction.
+- [ ] Possibility to expand one or multiple items.
+- [ ] Adding disabled state.
+- [ ] Adding more customisation options (affordance icon)
+- [ ] Testing (unit, integration, accessibility)
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+To install the Accordion component, follow these steps:
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/your-repo/accordion-component.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```sh
+   cd accordion-component
+   ```
+
+3. Install the dependencies:
+
+   ```sh
+   npm install
+   ```
+
+4. Start the development server:
+   ```sh
+   npm run storybook
+   ```
+
+## Usage
+
+Simply import the Accordion component and use it as shown below:
+:::note
+Note: each `Accordion.Item` value must be unique.
+:::
+
+```tsx
+import { Accordion } from "./components/accordion";
+
+const AccordionDemo = () => (
+<Accordion>
+  <Accordion.Item value="a" header="What are Avios?">
+    <p>
+      Avios is the loyalty currency of the British Airways Executive Club and
+      our partners.
+    </p>
+    ...
+  </Accordion.Item>
+  <Accordion.Item value="b" header="What is IAG?">
+    ...
+  </Accordion.Item>
+  <Accordion.Item value="c" header="How can I collect Avios?">
+    ...
+  </Accordion.Item>
+</Accordion>;
+)
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Install the component from your command line.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm install @avios/awesome-design-system
 ```
+
+## Anatomy
+
+This component is made up of the following parts:
+
+- Accordion: Root element.
+- Accordion.Item: Individual accordion item.
+
+```tsx
+import { Accordion } from "@avios/awesome-design-system";
+
+export default () => (
+  <Accordion>
+    <Accordion.Item>...</Accordion.Item>
+  </Accordion>
+);
+```
+
+## API Reference
+
+### Accordion Props
+
+| Prop          | Type                     | Default | Description                                                 |
+| ------------- | ------------------------ | ------- | ----------------------------------------------------------- |
+| value         | string                   | -       | The value of the item whose content is expanded.            |
+| defaultValue  | string                   | -       | The value of the initial item that is expanded.             |
+| onValueChange | (value?: string) => void | -       | Callback function triggered when the expanded item changes. |
+| className     | string                   | -       | Customizable class name for the accordion.                  |
+
+### Accordion.Item Props
+
+| Prop         | Type                    | Default | Description                                                    |
+| ------------ | ----------------------- | ------- | -------------------------------------------------------------- |
+| header       | React.ReactNode         | -       | The title of the accordion item.                               |
+| children     | React.ReactNode         | -       | The content of the accordion item.                             |
+| value        | string                  | -       | The value of the accordion item.                               |
+| onOpenChange | (open: boolean) => void | -       | Callback function triggered when the item is opened or closed. |
+| className    | string                  | -       | Customizable class name for the accordion item.                |

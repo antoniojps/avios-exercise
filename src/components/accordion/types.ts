@@ -1,16 +1,6 @@
 import React from "react";
 
-export interface AccordionBaseProps
-  extends React.HTMLAttributes<HTMLDivElement> {
-  /**
-   * Disables the accordion from user interaction.
-   *
-   * @defaultValue false
-   */
-  disabled?: boolean;
-}
-
-export interface AccordionSingleProps extends AccordionBaseProps {
+export interface AccordionProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * The value of the item whose content is expanded.
    */
@@ -23,21 +13,10 @@ export interface AccordionSingleProps extends AccordionBaseProps {
    * On extended item change callback.
    */
   onValueChange?(value?: string): void;
-}
-
-export interface AccordionMultipleProps extends AccordionBaseProps {
   /**
-   * The values of the items whose contents are expanded.
+   * Customizable class name.
    */
-  value?: string[];
-  /**
-   * The values of the initial items that are expanded.
-   */
-  defaultValue?: string[];
-  /**
-   * On extended item change callback.
-   */
-  onValueChange?(value: string[]): void;
+  className?: string;
 }
 
 export interface AccordionItemProps {
@@ -50,18 +29,15 @@ export interface AccordionItemProps {
    */
   children: React.ReactNode;
   /**
-   * Disables the accordion item from user interaction.
-   *
-   * @defaultValue false
-   */
-  disabled?: boolean;
-  /**
    * The value of the accordion item.
    */
   value: string;
-}
-
-export interface AccordionItemCollapsibleProps extends AccordionItemProps {
-  disabled?: boolean;
+  /**
+   * On open change callback for controlled component.
+   */
   onOpenChange?(open: boolean): void;
+  /**
+   * Customizable class name.
+   */
+  className?: string;
 }
