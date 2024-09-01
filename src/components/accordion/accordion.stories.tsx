@@ -24,14 +24,6 @@ export const Basic: Story = {
             Avios is the loyalty currency of the British Airways Executive Club
             and our partners.
           </p>
-          <p>
-            <a href="https://www.britishairways.com/content/executive-club/avios/collecting-avios">
-              Collect Avios
-            </a>{" "}
-            on flights, online shopping, hotel bookings and even your weekly
-            shop. With over 2,000 partners across fashion, travel and finance,
-            the possibilities are endless.
-          </p>
         </Accordion.Item>
         <Accordion.Item value="b" header="What is IAG?">
           <p>
@@ -68,14 +60,6 @@ export const Controlled: Story = {
           <p>
             Avios is the loyalty currency of the British Airways Executive Club
             and our partners.
-          </p>
-          <p>
-            <a href="https://www.britishairways.com/content/executive-club/avios/collecting-avios">
-              Collect Avios
-            </a>{" "}
-            on flights, online shopping, hotel bookings and even your weekly
-            shop. With over 2,000 partners across fashion, travel and finance,
-            the possibilities are endless.
           </p>
         </Accordion.Item>
         <Accordion.Item value="b" header="What is IAG?">
@@ -130,14 +114,6 @@ export const WithCustomHeader: Story = {
           <p>
             Avios is the loyalty currency of the British Airways Executive Club
             and our partners.
-          </p>
-          <p>
-            <a href="https://www.britishairways.com/content/executive-club/avios/collecting-avios">
-              Collect Avios
-            </a>{" "}
-            on flights, online shopping, hotel bookings and even your weekly
-            shop. With over 2,000 partners across fashion, travel and finance,
-            the possibilities are endless.
           </p>
         </Accordion.Item>
         <Accordion.Item value="b" header="What is IAG?">
