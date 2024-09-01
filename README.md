@@ -57,9 +57,8 @@ To install the Accordion component, follow these steps:
 ## Usage
 
 Simply import the Accordion component and use it as shown below:
-:::note
-Note: each `Accordion.Item` value must be unique.
-:::
+
+**Note**: each `Accordion.Item` `value` must be unique.
 
 ```tsx
 import { Accordion } from "./components/accordion";
@@ -84,7 +83,7 @@ const AccordionDemo = () => (
 
 ```
 
-## Installation
+## Installation (given it was published to npm)
 
 Install the component from your command line.
 
